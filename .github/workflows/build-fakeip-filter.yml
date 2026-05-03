@@ -22,13 +22,17 @@ jobs:
 
       - name: Download mihomo
         run: |
-          curl -L -o mihomo.gz https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-linux-amd64-alpha.gz
+          VERSION=1.19.20
+          curl -fL -o mihomo.gz "https://github.com/MetaCubeX/mihomo/releases/download/v${VERSION}/mihomo-linux-amd64-compatible-v${VERSION}.gz"
+          ls -lh mihomo.gz
           gzip -d mihomo.gz
           chmod +x mihomo
+          ./mihomo -v
 
       - name: Convert fakeip-filter.list to fakeip-filter.mrs
         run: |
           ./mihomo convert-ruleset domain text fakeip-filter.list fakeip-filter.mrs
+          ls -lh fakeip-filter.mrs
 
       - name: Commit generated mrs
         run: |
