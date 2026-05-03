@@ -1,0 +1,32 @@
+# LAN
+*.lan
+*.localdomain
+*.local
+*.home.arpa
+
+# Linksys / Belkin
+heartbeat.belkin.com
+*.belkin.com
+*.linksys.com
+*.linksyssmartwifi.com
+*.linksyscloud.com
+
+# NTP
+time.apple.com
+time-ios.apple.com
+*.ntp.org
+*.ntp.org.cn
+pool.ntp.org
+*.pool.ntp.org
+time.google.com
+time.cloudflare.com
+
+# Connectivity Check
+connectivitycheck.gstatic.com
+connectivitycheck.android.com
+clients3.google.com
+www.gstatic.com
+captive.apple.com
+www.msftconnecttest.com
+ipv6.msftconnecttest.com
+www.msftncsi.com
