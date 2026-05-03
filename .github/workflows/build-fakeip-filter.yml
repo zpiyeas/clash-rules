@@ -1,0 +1,39 @@
+name: Build fakeip-filter mrs
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "fakeip-filter.list"
+      - ".github/workflows/build-fakeip-filter.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download mihomo
+        run: |
+          curl -L -o mihomo.gz https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/mihomo-linux-amd64-alpha.gz
+          gzip -d mihomo.gz
+          chmod +x mihomo
+
+      - name: Convert fakeip-filter.list to fakeip-filter.mrs
+        run: |
+          ./mihomo convert-ruleset domain text fakeip-filter.list fakeip-filter.mrs
+
+      - name: Commit generated mrs
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add fakeip-filter.mrs
+          git commit -m "build fakeip-filter.mrs" || echo "No changes to commit"
+          git push
