@@ -1,32 +1,401 @@
+# =========================
+# Fake-IP Filter List
+# Merged custom version
+# Base: original fakeip-filter.list + current OpenClash filter + custom extras
+# =========================
+
+
+# =========================
 # LAN
+# =========================
+*
 *.lan
 *.localdomain
+*.example
+*.invalid
+*.localhost
+*.test
 *.local
 *.home.arpa
+*.direct
+PDC._msDCS.*.*
+DC._msDCS.*.*
+GC._msDCS.*.*
 
-# Linksys / Belkin
-heartbeat.belkin.com
-*.belkin.com
-*.linksys.com
-*.linksyssmartwifi.com
-*.linksyscloud.com
 
-# NTP
+# =========================
+# Common Network / Portal / DNS Test
+# =========================
+cable.auth.com
+network-test.debian.org
+detectportal.firefox.com
+resolver1.opendns.com
+injections.adguard.org
+
+
+# =========================
+# Twilio / STUN / TURN
+# =========================
+global.turn.twilio.com
+global.stun.twilio.com
+
+
+# =========================
+# China Carrier Auth / Portal
+# =========================
+*.cmpassport.com
+id6.me
+open.e.189.cn
+opencloud.wostore.cn
+id.mail.wo.cn
+mdn.open.wo.cn
+hmrz.wo.cn
+nishub1.10010.com
+enrichgw.10010.com
+*.wosms.cn
+*.jegotrip.com.cn
+*.icitymobile.mobi
+*.10099.com.cn
+*.microdone.cn
+
+
+# =========================
+# Banking / Payment
+# =========================
+*.pingan.com.cn
+*.cmbchina.com
++.cmbchina.com
++.cmbimg.com
+
+
+# =========================
+# NTP / Time Service
+# =========================
+time.*.com
+time.*.gov
+time.*.edu.cn
+time.*.apple.com
 time.apple.com
 time-ios.apple.com
+time1.*.com
+time2.*.com
+time3.*.com
+time4.*.com
+time5.*.com
+time6.*.com
+time7.*.com
+ntp.*.com
+ntp1.*.com
+ntp2.*.com
+ntp3.*.com
+ntp4.*.com
+ntp5.*.com
+ntp6.*.com
+ntp7.*.com
+*.time.edu.cn
 *.ntp.org
+ntp.org
 *.ntp.org.cn
 pool.ntp.org
 *.pool.ntp.org
++.pool.ntp.org
+time1.cloud.tencent.com
 time.google.com
 time.cloudflare.com
+ntp.nasa.gov
 
-# Connectivity Check
+
+# =========================
+# Windows / Microsoft Connectivity Check
+# =========================
++.msftconnecttest.com
++.msftncsi.com
+www.msftconnecttest.com
+ipv6.msftconnecttest.com
+www.msftncsi.com
+
+
+# =========================
+# Apple Connectivity / Captive Portal
+# =========================
+captive.apple.com
+token.safebrowsing.apple
+
+
+# =========================
+# Google / Android Connectivity Check
+# =========================
 connectivitycheck.gstatic.com
 connectivitycheck.android.com
 clients3.google.com
 www.gstatic.com
-captive.apple.com
-www.msftconnecttest.com
-ipv6.msftconnecttest.com
-www.msftncsi.com
+
+
+# =========================
+# Linksys / Belkin Router
+# =========================
+heartbeat.belkin.com
+belkin.com
+*.belkin.com
+*.linksys.com
+*.linksyssmartwifi.com
+linksyscloud.com
+*.linksyscloud.com
+
+
+# =========================
+# ASUS Router
+# =========================
+*.router.asus.com
+
+
+# =========================
+# Apple Software Update Service
+# =========================
+mesu.apple.com
+swscan.apple.com
+swquery.apple.com
+swdownload.apple.com
+swcdn.apple.com
+swdist.apple.com
+
+
+# =========================
+# Google
+# =========================
+lens.l.google.com
+stun.l.google.com
+na.b.g-tun.com
+
+
+# =========================
+# QQ / Tencent Login
+# =========================
+localhost.ptlogin2.qq.com
+localhost.sec.qq.com
++.qq.com
++.tencent.com
+
+
+# =========================
+# WeChat Login
+# =========================
+localhost.*.weixin.qq.com
++.kk-rays.com
+
+
+# =========================
+# NetEase Cloud Music
+# =========================
+music.163.com
+*.music.163.com
+*.126.net
+
+
+# =========================
+# Baidu Music
+# =========================
+musicapi.taihe.com
+music.taihe.com
+
+
+# =========================
+# Kugou Music
+# =========================
+songsearch.kugou.com
+trackercdn.kugou.com
+
+
+# =========================
+# Kuwo Music
+# =========================
+*.kuwo.cn
+
+
+# =========================
+# JOOX Music
+# =========================
+api-jooxtt.sanook.com
+api.joox.com
+joox.com
+
+
+# =========================
+# QQ Music
+# =========================
+y.qq.com
+*.y.qq.com
+streamoc.music.tc.qq.com
+mobileoc.music.tc.qq.com
+isure.stream.qqmusic.qq.com
+dl.stream.qqmusic.qq.com
+aqqmusic.tc.qq.com
+amobile.music.tc.qq.com
+
+
+# =========================
+# Xiami Music
+# =========================
+*.xiami.com
+
+
+# =========================
+# Migu Music
+# =========================
+*.music.migu.cn
+music.migu.cn
+
+
+# =========================
+# Game / Steam
+# =========================
++.steamcontent.com
+
+
+# =========================
+# Nintendo Switch
+# =========================
++.srv.nintendo.net
+*.n.n.srv.nintendo.net
++.cdn.nintendo.net
+
+
+# =========================
+# Sony PlayStation
+# =========================
++.stun.playstation.net
+
+
+# =========================
+# Microsoft Xbox
+# =========================
+xbox.*.*.microsoft.com
+*.*.xboxlive.com
+xbox.*.microsoft.com
+xnotify.xboxlive.com
+
+
+# =========================
+# Battle.net / Wargaming
+# =========================
++.battle.net
++.battlenet.com.cn
++.wotgame.cn
++.wggames.cn
++.wowsgame.cn
++.wargaming.net
+
+
+# =========================
+# FinalFantasy XIV Worldwide Server & CN Server
+# =========================
+*.square-enix.com
+*.finalfantasyxiv.com
+*.ffxiv.com
+*.ff14.sdo.com
+ff.dorado.sdo.com
+
+
+# =========================
+# Golang
+# =========================
+proxy.golang.org
+
+
+# =========================
+# STUN
+# =========================
+stun.*.*
+stun.*.*.*
++.stun.*.*
++.stun.*.*.*
++.stun.*.*.*.*
++.stun.*.*.*.*.*
+
+
+# =========================
+# Bilibili
+# =========================
+*.mcdn.bilivideo.cn
+
+
+# =========================
+# Netflix
+# =========================
++.nflxvideo.net
+
+
+# =========================
+# Disney Plus
+# =========================
++.media.dssott.com
+
+
+# =========================
+# Shark007 Codecs
+# =========================
+shark007.net
+
+
+# =========================
+# Xiaomi / Mijia
+# =========================
+Mijia Cloud
++.market.xiaomi.com
+
+
+# =========================
+# AdGuard
+# =========================
+adguardteam.github.io
+adrules.top
+anti-ad.net
+local.adguard.org
+static.adtidy.org
+
+
+# =========================
+# Xunlei
+# =========================
++.sandai.net
++.n0808.com
+
+
+# =========================
+# T-Mobile / Ultra Mobile / WiFi Calling
+# =========================
++.3gppnetwork.org
++.pub.3gppnetwork.org
+
+
+# =========================
+# UU Plugin
+# =========================
++.uu.163.com
+ps.res.netease.com
+
+
+# =========================
+# Sunlogin / Oray
+# =========================
++.oray.com
++.orayimg.com
+
+
+# =========================
+# LOL Voice
+# =========================
++.gcloudcs.com
++.gcloudsdk.com
+
+
+# =========================
+# DDNS
+# =========================
++.dynv6.net
+
+
+# =========================
+# Evernote China
+# =========================
+app.yinxiang.com
