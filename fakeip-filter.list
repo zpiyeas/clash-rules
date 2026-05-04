@@ -399,3 +399,18 @@ ps.res.netease.com
 # Evernote China
 # =========================
 app.yinxiang.com
+
+
+# =========================
+# Huawei / CHINT / Smart Home / Samsung Extra
+# =========================
+# Huawei Cloud / Device Heartbeat
++.hicloud.com
++.dbankcloud.com
+
+# Midea / Smart Home Local Discovery
++.local.midea.com.cn
+
+# Samsung Cloud / Sync
++.samsungcloud.com
++.scloud.com
